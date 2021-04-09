@@ -29,10 +29,11 @@ const (
 )
 
 var (
-	cert string
-	key  string
-	port string
-	name string
+	cert  string
+	key   string
+	port  string
+	name  string
+	dummy string
 )
 
 func init() {
@@ -40,6 +41,7 @@ func init() {
 	flag.StringVar(&key, "key", "", "give me a key")
 	flag.StringVar(&port, "port", "80", "give me a port number")
 	flag.StringVar(&name, "name", os.Getenv("WHOAMI_NAME"), "give me a name")
+	flag.StringVar(&dummy, "dummy-flag", "", "this dummy flag does nothing")
 }
 
 var upgrader = websocket.Upgrader{
