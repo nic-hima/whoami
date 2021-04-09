@@ -46,7 +46,7 @@ func init() {
 
 var upgrader = websocket.Upgrader{
 	ReadBufferSize:  1024,
-	WriteBufferSize: 1024,
+	WriteBufferSize: 2030,
 }
 
 func main() {
